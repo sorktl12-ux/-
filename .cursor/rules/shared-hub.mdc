@@ -1,0 +1,13 @@
+---
+description: Always load shared hub so features share context on this computer
+globs:
+alwaysApply: true
+---
+
+Always read `shared/PROFILE.md`, `shared/MEMORY.md`, and `shared/CAPABILITIES.md` at the start of tasks that touch calendar, mail, iPhone, briefing, or user preferences.
+
+After completing such work, update `shared/MEMORY.md` with a short dated note (no passwords or tokens).
+
+Reuse scripts in `google-calendar-sync/` and `iphone-data-organizer/` when relevant.
+
+Calendar: current year only by default; prefixes `[학사]` and `[목]`.

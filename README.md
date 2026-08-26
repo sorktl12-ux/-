@@ -1,5 +1,11 @@
-# iPhone + Mac 데이터 정리
+# Shared Hub — 설원도 컴퓨터 공통 정보
 
-맥북 연동으로 iPhone 데이터를 정리하는 도구입니다.
+이 레포는 **여러 Cursor 기능이 같은 정보·도구를 쓰도록** 하는 허브입니다.
 
-**시작:** [iphone-data-organizer/README.md](iphone-data-organizer/README.md)
+| 폴더 | 용도 |
+|------|------|
+| [`shared/`](shared/README.md) | 프로필·메모리·기능 목록 (에이전트 필수 읽기) |
+| [`google-calendar-sync/`](google-calendar-sync/README.md) | Gmail → Google Calendar |
+| [`iphone-data-organizer/`](iphone-data-organizer/README.md) | Mac+iPhone 파일 정리 |
+
+시작: `shared/MEMORY.md` → 최근 작업 확인.

@@ -1,0 +1,3 @@
+{
+  "install": "pip3 install --user google-api-python-client google-auth google-auth-oauthlib websockets pillow 2>/dev/null || true\nchmod +x iphone-data-organizer/install.sh iphone-data-organizer/scripts/*.sh 2>/dev/null || true\necho 'Shared hub ready: see shared/README.md and AGENTS.md'"
+}
