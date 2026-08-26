@@ -24,13 +24,18 @@ for r in reg["repos"]:
         print(f"NEED_URL {r['name']} aliases={r.get('sidebar_aliases')}")
         continue
     dest = os.path.join(root, path)
-    if os.path.isdir(os.path.join(dest, ".git")):
+    git_dir = os.path.join(dest, ".git")
+    if os.path.isdir(git_dir) or os.path.isfile(git_dir):
         print(f"UPDATE {r['name']}")
         subprocess.call(["git", "-C", dest, "fetch", "--depth", "1", "origin"])
-        subprocess.call(["git", "-C", dest, "pull", "--ff-only"])
+        rc = subprocess.call(["git", "-C", dest, "pull", "--ff-only"])
+        if rc != 0:
+            subprocess.call(["git", "-C", dest, "checkout", "main"])
     else:
         print(f"CLONE  {r['name']} -> {path}")
-        os.makedirs(os.path.dirname(dest), exist_ok=True)
+        os.makedirs(os.path.dirname(dest) or ".", exist_ok=True)
+        if os.path.exists(dest) and not os.listdir(dest):
+            os.rmdir(dest)
         subprocess.check_call(["git", "clone", "--depth", "1", url, dest])
 print("OK link-repos")
 PY
