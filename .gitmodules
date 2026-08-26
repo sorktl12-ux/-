@@ -1,0 +1,3 @@
+[submodule "linked/beatlink"]
+	path = linked/beatlink
+	url = https://github.com/sorktl12-ux/beatlink.git

@@ -43,19 +43,23 @@
 | Remote Control / My Machines | 맥북에서 도구 실행 |
 | iPhone Cursor 앱 | 지시·리뷰용 리모컨 (실행 환경 아님) |
 
-## 4. 아직 다른 폴더에만 있는 기능 (연결 대상)
+## 5. 연결된 다른 Cursor 레포
+
+| 레포 | 경로 | 할 수 있는 일 |
+|------|------|----------------|
+| beatlink | `linked/beatlink/` | 사이트 코드·Supabase·Vercel 설정 수정 |
+
+동기화: `./shared/bin/link-repos.sh`  
+목록: `linked/README.md`
+
+Environment(웹)에 `github.com/sorktl12-ux/beatlink` 도 레포로 넣으면 Cloud Agent가 양쪽을 공식으로 함께 씁니다.
+
+## 6. 아직 다른 폴더에만 있는 기능 (연결 대상)
 
 사용자가 왼쪽에서 보는 예:
 
 - `english-call`
 - 아침 브리핑
-- 프로필 유지
+- 긱스(루이) 감시
 
-→ 이 레포의 `shared/` 를 읽도록 Environment에 같이 넣거나, 해당 레포에 `shared/` 복사/서브모듈.
-
-## 아침 브리핑이 이 허브를 쓸 때
-
-1. `shared/MEMORY.md` 최근 항목 확인  
-2. Google Calendar에서 오늘/`[학사]`/`[목]` 일정 조회  
-3. 필요 시 Gmail 중요 메일 요약  
-4. 결과를 MEMORY에 한 줄 기록  
+→ GitHub URL이 있으면 `linked/` + Environment repos에 추가.
