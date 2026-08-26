@@ -1,0 +1,33 @@
+{
+  "note": "Fill unknown GitHub URLs from Cursor left Repositories, then run shared/bin/link-repos.sh",
+  "repos": [
+    {
+      "name": "-",
+      "github": "https://github.com/sorktl12-ux/-",
+      "path": ".",
+      "status": "hub",
+      "sidebar_aliases": ["아이폰 맥북 제어", "-"]
+    },
+    {
+      "name": "beatlink",
+      "github": "https://github.com/sorktl12-ux/beatlink",
+      "path": "linked/beatlink",
+      "status": "linked",
+      "sidebar_aliases": ["beatlink", "beatdrop"]
+    },
+    {
+      "name": "morning-briefing",
+      "github": null,
+      "path": "linked/morning-briefing",
+      "status": "needs_url",
+      "sidebar_aliases": ["아침브리핑", "morning briefing"]
+    },
+    {
+      "name": "english-call",
+      "github": null,
+      "path": "linked/english-call",
+      "status": "needs_url",
+      "sidebar_aliases": ["english-call"]
+    }
+  ]
+}
