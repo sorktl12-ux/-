@@ -1,3 +1,4 @@
 {
-  "install": "pip3 install --user google-api-python-client google-auth google-auth-oauthlib websockets pillow 2>/dev/null || true\nchmod +x iphone-data-organizer/install.sh iphone-data-organizer/scripts/*.sh 2>/dev/null || true\necho 'Shared hub ready: see shared/README.md and AGENTS.md'"
+  "snapshot": "snapshot-20260826-aab98861-9e97-45b6-9bb4-3a904543b2ec",
+  "install": "pip3 install --user google-api-python-client google-auth google-auth-oauthlib websockets pillow 2>/dev/null || true\nchmod +x iphone-data-organizer/install.sh iphone-data-organizer/scripts/*.sh shared/bin/*.sh 2>/dev/null || true\ntest -f shared/README.md && echo SHARED_HUB_OK\necho Shared hub ready"
 }
