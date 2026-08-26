@@ -1,0 +1,12 @@
+---
+description: Prefer MacBook My Machines twin; shared hub is source of truth
+alwaysApply: true
+---
+
+# Shared hub + Mac runtime
+
+1. Before non-trivial work, read `shared/HANDOFF_MAC.md` (if present), `shared/MEMORY.md`, `shared/PROFILE.md`, `shared/MY_MACHINES.md`.
+2. User preference: run on **MacBook My Machines**, not Cloud virtual desktop.
+3. If this session is Cloud VM (`usePrivateWorker` false / no Mac Chrome): do not pretend to control the user's Mac; point them to `shared/HANDOFF_MAC.md` twin steps.
+4. Knowledge sharing across chats/repos = commit updates to `shared/` and `linked/registry.json` on this hub repo.
+5. Never store passwords or tokens in `shared/MEMORY.md`.

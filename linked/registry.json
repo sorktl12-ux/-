@@ -1,0 +1,61 @@
+{
+  "note": "All GitHub repos under sorktl12-ux. Private clones need GITHUB_TOKEN (see ~/.config/sorktl12/github_token on this VM). Public beatlink is a git submodule.",
+  "repos": [
+    {
+      "name": "-",
+      "github": "https://github.com/sorktl12-ux/-",
+      "path": ".",
+      "status": "hub",
+      "visibility": "public",
+      "sidebar_aliases": ["아이폰 맥북 제어", "-"]
+    },
+    {
+      "name": "beatlink",
+      "github": "https://github.com/sorktl12-ux/beatlink",
+      "path": "linked/beatlink",
+      "status": "linked",
+      "visibility": "public",
+      "sidebar_aliases": ["beatlink"]
+    },
+    {
+      "name": "beat-drop",
+      "github": "https://github.com/sorktl12-ux/beat-drop",
+      "path": "linked/beat-drop",
+      "status": "linked",
+      "visibility": "private",
+      "sidebar_aliases": ["beatdrop", "beat-drop", "BeatDrop"]
+    },
+    {
+      "name": "english-call",
+      "github": "https://github.com/sorktl12-ux/english-call",
+      "path": "linked/english-call",
+      "status": "linked",
+      "visibility": "private",
+      "sidebar_aliases": ["english-call", "영어전화"]
+    },
+    {
+      "name": "profile-maintain",
+      "github": "https://github.com/sorktl12-ux/profile-maintain",
+      "path": "linked/profile-maintain",
+      "status": "linked",
+      "visibility": "private",
+      "sidebar_aliases": ["프로필유지", "긱스", "루이", "profile-maintain"]
+    },
+    {
+      "name": "beatlink1",
+      "github": "https://github.com/sorktl12-ux/beatlink1",
+      "path": "linked/beatlink1",
+      "status": "linked",
+      "visibility": "private",
+      "sidebar_aliases": ["beatlink1"]
+    },
+    {
+      "name": "morning-briefing",
+      "github": null,
+      "path": "shared/morning-briefing",
+      "status": "mail_service",
+      "visibility": null,
+      "sidebar_aliases": ["아침브리핑", "아침 브리핑", "morning briefing"]
+    }
+  ]
+}
