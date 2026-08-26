@@ -15,7 +15,7 @@
 |--------|------|------|
 | Chrome (Cloud Agent VM) | Gmail/Calendar 로그인됨 | 세션은 VM에 종속, 재부팅 시 유지될 수 있음 |
 | Google OAuth 시크릿 | 미등록 | `GOOGLE_CLIENT_ID/SECRET/REFRESH_TOKEN` 권장 |
-| My Machines (맥북) | 미연결 | `agent worker start` 필요 |
+| My Machines (맥북) | **기본 실행 환경으로 지정** | `shared/MY_MACHINES.md` — worker 켜고 새 에이전트에서 MacBook 선택 |
 | iCloud / iPhone USB | 스크립트만 준비 | 맥북에서 실행 |
 
 ## 선호·규칙

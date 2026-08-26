@@ -2,6 +2,12 @@
 
 비밀번호·토큰·쿠키는 적지 않는다. 최신이 위로.
 
+## 2026-08-26 (런타임 선호: 맥북)
+
+- 사용자: 가상 Desktop으로 진행한 방식은 불편. **앞으로는 맥북에서 직접 보이게** 처리할 것.
+- 이 세션은 Cloud VM이라 mid-flight 전환 불가 → 맥북에서 `agent worker start --name MacBook` 후 **새 에이전트**에서 My Machines 선택.
+- 상세: `shared/MY_MACHINES.md`
+
 ## 2026-08-26 (GitHub 로그인 성공 → 전체 레포 연결)
 
 - Agent Chrome에서 GitHub `sorktl12-ux` 로그인 완료.
