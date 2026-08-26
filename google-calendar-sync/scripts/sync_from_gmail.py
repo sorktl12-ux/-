@@ -12,14 +12,10 @@ from email.utils import parsedate_to_datetime
 from typing import Any
 from zoneinfo import ZoneInfo
 
-from google.auth.transport.requests import Request
-from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
 
-SCOPES = [
-    "https://www.googleapis.com/auth/gmail.readonly",
-    "https://www.googleapis.com/auth/calendar",
-]
+from google_auth import get_credentials
+
 TZ = ZoneInfo("Asia/Seoul")
 DRY_RUN = os.environ.get("DRY_RUN", "").lower() in ("1", "true", "yes")
 CALENDAR_ID = os.environ.get("GOOGLE_CALENDAR_ID", "primary")
@@ -30,37 +26,6 @@ GMAIL_QUERIES = [
     'from:me to:me (시간표 OR 목요일 OR 학사일정 OR "2학기" OR 학사)',
     "from:me subject:(시간표 OR 학사일정 OR 목요일)",
 ]
-
-
-def get_credentials() -> Credentials:
-    client_id = os.environ.get("GOOGLE_CLIENT_ID")
-    client_secret = os.environ.get("GOOGLE_CLIENT_SECRET")
-    refresh_token = os.environ.get("GOOGLE_REFRESH_TOKEN")
-    missing = [
-        n
-        for n, v in [
-            ("GOOGLE_CLIENT_ID", client_id),
-            ("GOOGLE_CLIENT_SECRET", client_secret),
-            ("GOOGLE_REFRESH_TOKEN", refresh_token),
-        ]
-        if not v
-    ]
-    if missing:
-        raise SystemExit(
-            "Missing secrets: "
-            + ", ".join(missing)
-            + "\nAdd them to Cursor environment secrets, then re-run."
-        )
-    creds = Credentials(
-        token=None,
-        refresh_token=refresh_token,
-        token_uri="https://oauth2.googleapis.com/token",
-        client_id=client_id,
-        client_secret=client_secret,
-        scopes=SCOPES,
-    )
-    creds.refresh(Request())
-    return creds
 
 
 def gmail_body(payload: dict[str, Any]) -> str:

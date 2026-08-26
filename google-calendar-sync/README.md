@@ -1,32 +1,54 @@
-# Gmail → Google Calendar 동기화
+# Gmail → Google Calendar (자동 로그인)
 
-`sorktl12@gmail.com`으로 보낸 **목요일 시간표** / **2학기 학사일정** 메일을 읽어
-Google Calendar에 이벤트를 넣습니다. iPhone Google Calendar 앱에도 동기화됩니다.
+한 번 OAuth를 연결하면, 이후 에이전트는 **비밀번호 없이** Gmail/캘린더에 접속합니다.
 
-## 필요 시크릿
+## 왜 비밀번호 자동 입력은 안 되나
 
-| 이름 | 설명 |
-|------|------|
-| `GOOGLE_CLIENT_ID` | OAuth Desktop 클라이언트 ID |
-| `GOOGLE_CLIENT_SECRET` | OAuth 클라이언트 시크릿 |
-| `GOOGLE_REFRESH_TOKEN` | `gmail.readonly` + `calendar` 스코프 리프레시 토큰 |
+Google은 비밀번호·쿠키로 봇이 로그인하는 것을 막습니다 (2FA, 캡차, 보안 정책).  
+대신 **OAuth refresh token**을 Cursor 시크릿에 저장하면, 스크립트가 자동으로 access token을 갱신합니다.
 
-## 실행
+```
+[1회] Google Cloud에서 앱 만들고 → 브라우저에서 "허용"
+        ↓
+시크릿에 GOOGLE_REFRESH_TOKEN 저장
+        ↓
+[이후] 에이전트가 자동 로그인 → 메일 읽기 / 캘린더 쓰기
+```
+
+## 1회 설정
+
+1. [Gmail API](https://console.cloud.google.com/apis/library/gmail.googleapis.com) · [Calendar API](https://console.cloud.google.com/apis/library/calendar-json.googleapis.com) 사용 설정
+2. [사용자 인증 정보](https://console.cloud.google.com/apis/credentials) → OAuth 클라이언트 ID → **데스크톱 앱**
+3. Cursor 환경 시크릿에 저장:
+   - `GOOGLE_CLIENT_ID`
+   - `GOOGLE_CLIENT_SECRET`
+4. 채팅에 **「OAuth 준비됨」** 이라고 보내면 에이전트가 승인 화면을 엽니다  
+   또는 직접:
 
 ```bash
 cd google-calendar-sync
 pip install -r requirements.txt
-python scripts/sync_from_gmail.py
+python scripts/oauth_setup.py
 ```
 
-드라이런:
+5. 출력된 `GOOGLE_REFRESH_TOKEN` 을 Cursor 시크릿에 추가
+
+## 이후 자동 실행
 
 ```bash
+python scripts/sync_from_gmail.py
+# 또는
 DRY_RUN=1 python scripts/sync_from_gmail.py
 ```
 
-## 동작
+시크릿이 있으면 로그인 화면 없이 동작합니다.
 
-1. Gmail에서 본인 발신 메일 중 시간표/학사일정 관련 최근 메일 검색
-2. 본문에서 이벤트·목요일 반복 일정 파싱
-3. Google Calendar `primary`에 생성 (이미 있으면 스킵)
+## 시크릿 목록
+
+| 이름 | 설명 |
+|------|------|
+| `GOOGLE_CLIENT_ID` | OAuth 클라이언트 ID |
+| `GOOGLE_CLIENT_SECRET` | OAuth 시크릿 |
+| `GOOGLE_REFRESH_TOKEN` | 1회 승인 후 발급 (자동 로그인 핵심) |
+
+비밀번호는 저장하지 마세요.
