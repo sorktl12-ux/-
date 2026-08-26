@@ -13,8 +13,14 @@
 
 - Environment 초안 연결, healthcheck, 연도 검증, 중복 개강 1건 삭제.
 
-## 미완료 (사용자 1클릭)
+## Environment (모바일 Save 없을 때)
 
-- [ ] Environment **Save**
+- 대시보드 Save가 안 보여도 레포 `.cursor/environment.json`에 snapshot이 있으면 **우선 적용**됨.
+- snapshot: `snapshot-20260826-aab98861-9e97-45b6-9bb4-3a904543b2ec` (ready)
+- 웹에서 보려면: https://cursor.com/dashboard/cloud-agents#environments
+- 에이전트: https://cursor.com/agents/bc-019f419b-a00a-7934-a2b3-cab8404cc10a
+
+## 미완료 (선택)
+
 - [ ] (선택) `GOOGLE_*` OAuth 시크릿
 - [ ] (선택) english-call Git URL / 맥북 My Machines
