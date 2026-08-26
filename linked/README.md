@@ -1,23 +1,35 @@
 # Linked Cursor projects
 
-## 자동 연결됨 (GitHub 공개)
+## 연결됨
 
-| 사이드바/이름 | GitHub | 경로 |
-|---------------|--------|------|
-| 허브 / `-` | https://github.com/sorktl12-ux/- | `/workspace` |
-| beatlink | https://github.com/sorktl12-ux/beatlink | `linked/beatlink/` |
+| 사이드바/이름 | GitHub | 경로 | 상태 |
+|---------------|--------|------|------|
+| 허브 / `-` | https://github.com/sorktl12-ux/- | `/workspace` | hub |
+| beatlink | https://github.com/sorktl12-ux/beatlink | `linked/beatlink/` | linked (public) |
 
-## URL 필요 (왼쪽에는 보이지만 GitHub URL을 모름)
+## 토큰 필요 (private)
 
-| 사이드바 이름 | 상태 |
-|---------------|------|
-| 아침브리핑 | `registry.json`에 자리만 만듦 — **GitHub URL 필요** |
-| english-call | 同上 |
+| 이름 | GitHub | 경로 |
+|------|--------|------|
+| beat-drop / BeatDrop | https://github.com/sorktl12-ux/beat-drop | `linked/beat-drop/` (clone 대기) |
 
-목록 파일: `linked/registry.json`  
-동기화: `./shared/bin/link-repos.sh`
+Environment Secrets에 `GITHUB_TOKEN` (classic PAT, `repo` scope) 추가 후:
 
-## 전부 연결하는 방법
+```bash
+export GITHUB_TOKEN=…   # 또는 Environment Secret으로 주입
+./shared/bin/link-repos.sh
+```
 
-1. Cursor 왼쪽 Repositories에 보이는 **이름 + GitHub URL**을 채팅에 붙여넣기  
-2. 에이전트가 `registry.json`에 넣고 submodule/clone 후 Environment repos에도 추가
+## 메일 서비스 (GitHub 없음)
+
+| 사이드바 | 설명 |
+|----------|------|
+| 아침브리핑 | Gmail `[아침 운세]` + 카카오 나와의 채팅 → `shared/morning-briefing/` |
+
+## URL 미확인
+
+| 사이드바 | 상태 |
+|----------|------|
+| english-call | GitHub/Origin URL 채팅에 붙여넣기 필요 |
+
+목록: `linked/registry.json` · 동기화: `./shared/bin/link-repos.sh`

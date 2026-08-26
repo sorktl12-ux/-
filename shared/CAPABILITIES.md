@@ -24,7 +24,16 @@
 | 18:00–19:00 | 개인레슨-랩A · 남현우 | 예술관 2층 연습실16 |
 | 19:00–20:00 | 개인레슨-랩A · 박민준 | 예술관 2층 연습실16 |
 
-## 2. iPhone + Mac 데이터 정리
+## 2. 아침 브리핑
+
+| 기능 | 경로 | 상태 |
+|------|------|------|
+| 포맷·공유 규칙 | `shared/morning-briefing/README.md` | 문서화됨 |
+| 전달 채널 | Gmail 자가수신 + 카카오 「나와의 채팅」 | 운영 중 (레포 아님) |
+
+다른 에이전트는 당일 브리핑 요약을 `shared/MEMORY.md`에서 읽는다.
+
+## 3. iPhone + Mac 데이터 정리
 
 | 기능 | 경로 |
 |------|------|
@@ -35,7 +44,7 @@
 
 실행 위치: **맥북** (My Machines). Cloud VM만으로는 iPhone 저장소 직접 접근 불가.
 
-## 3. Cursor / 에이전트 운영
+## 4. Cursor / 에이전트 운영
 
 | 기능 | 설명 |
 |------|------|
@@ -45,21 +54,15 @@
 
 ## 5. 연결된 다른 Cursor 레포
 
-| 레포 | 경로 | 할 수 있는 일 |
-|------|------|----------------|
-| beatlink | `linked/beatlink/` | 사이트 코드·Supabase·Vercel 설정 수정 |
+| 레포 | 경로 | 상태 | 할 수 있는 일 |
+|------|------|------|----------------|
+| beatlink | `linked/beatlink/` | linked (public) | 사이트·Supabase·Vercel |
+| beat-drop | `linked/beat-drop/` | **needs GITHUB_TOKEN** | private; PAT 후 clone |
 
 동기화: `./shared/bin/link-repos.sh`  
-목록: `linked/README.md`
+목록: `linked/README.md` / `linked/registry.json`
 
-Environment(웹)에 `github.com/sorktl12-ux/beatlink` 도 레포로 넣으면 Cloud Agent가 양쪽을 공식으로 함께 씁니다.
+## 6. 아직 URL이 없는 사이드바 항목
 
-## 6. 아직 다른 폴더에만 있는 기능 (연결 대상)
-
-사용자가 왼쪽에서 보는 예:
-
-- `english-call`
-- 아침 브리핑
-- 긱스(루이) 감시
-
-→ GitHub URL이 있으면 `linked/` + Environment repos에 추가.
+- `english-call` — GitHub/Origin URL 필요
+- 긱스(루이) 감시 — URL 또는 대상 사이트 필요

@@ -1,11 +1,12 @@
 {
-  "note": "Fill unknown GitHub URLs from Cursor left Repositories, then run shared/bin/link-repos.sh",
+  "note": "Public repos are linked. Private beat-drop needs GITHUB_TOKEN. Sidebar names without GitHub stay as stubs until URLs are pasted.",
   "repos": [
     {
       "name": "-",
       "github": "https://github.com/sorktl12-ux/-",
       "path": ".",
       "status": "hub",
+      "visibility": "public",
       "sidebar_aliases": ["아이폰 맥북 제어", "-"]
     },
     {
@@ -13,20 +14,33 @@
       "github": "https://github.com/sorktl12-ux/beatlink",
       "path": "linked/beatlink",
       "status": "linked",
-      "sidebar_aliases": ["beatlink", "beatdrop"]
+      "visibility": "public",
+      "sidebar_aliases": ["beatlink"]
+    },
+    {
+      "name": "beat-drop",
+      "github": "https://github.com/sorktl12-ux/beat-drop",
+      "path": "linked/beat-drop",
+      "status": "needs_token",
+      "visibility": "private",
+      "sidebar_aliases": ["beatdrop", "beat-drop", "BeatDrop"],
+      "evidence": "Gmail: Cursor/Vercel notifications for sorktl12-ux/beat-drop; public URL 404 without auth"
     },
     {
       "name": "morning-briefing",
       "github": null,
-      "path": "linked/morning-briefing",
-      "status": "needs_url",
-      "sidebar_aliases": ["아침브리핑", "morning briefing"]
+      "path": "shared/morning-briefing",
+      "status": "mail_service",
+      "visibility": null,
+      "sidebar_aliases": ["아침브리핑", "아침 브리핑", "morning briefing"],
+      "evidence": "Self-emails [아침 운세] to sorktl12@gmail.com + KakaoTalk 나와의 채팅; no GitHub repo found"
     },
     {
       "name": "english-call",
       "github": null,
       "path": "linked/english-call",
       "status": "needs_url",
+      "visibility": null,
       "sidebar_aliases": ["english-call"]
     }
   ]
