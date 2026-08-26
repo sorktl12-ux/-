@@ -1,11 +1,12 @@
-# Shared Hub — 설원도 컴퓨터 공통 정보
+# Shared Hub — 설원도 Cursor 공통
 
-이 레포는 **여러 Cursor 기능이 같은 정보·도구를 쓰도록** 하는 허브입니다.
+이 레포는 **Cursor로 작업한 레포·기능을 서로 연결**하는 허브입니다.
 
-| 폴더 | 용도 |
+| 경로 | 용도 |
 |------|------|
-| [`shared/`](shared/README.md) | 프로필·메모리·기능 목록 (에이전트 필수 읽기) |
-| [`google-calendar-sync/`](google-calendar-sync/README.md) | Gmail → Google Calendar |
-| [`iphone-data-organizer/`](iphone-data-organizer/README.md) | Mac+iPhone 파일 정리 |
+| [`shared/`](shared/README.md) | 프로필·메모리·기능 목록 |
+| [`linked/`](linked/README.md) | 다른 Cursor 레포 (`beatlink` 등) |
+| [`google-calendar-sync/`](google-calendar-sync/README.md) | Gmail → Calendar |
+| [`iphone-data-organizer/`](iphone-data-organizer/README.md) | Mac+iPhone 정리 |
 
-시작: `shared/MEMORY.md` → 최근 작업 확인.
+연결 동기화: `./shared/bin/link-repos.sh`
