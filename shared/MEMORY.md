@@ -2,6 +2,13 @@
 
 비밀번호·토큰·쿠키는 적지 않는다. 최신이 위로.
 
+## 2026-08-26 (맥 트윈 상태)
+
+- API로 My Machines 에이전트 생성은 되지만 run이 **CREATING**에 고착 (worker `isInUse=false`).
+- 온라인 worker는 `profile-maintain` 전용 (`~/profile-maintain @ MOON MacBookPro`).
+- **우회**: cursor.com/agents UI에서 New Agent → Environment 드롭다운에서 맥 머신 직접 선택 + HANDOFF 프롬프트.
+- Cloud 쪽: `GITHUB_TOKEN` 시크릿 동작 확인, `link-repos`로 private 6개 동기화 OK, environment install 재제안함.
+
 ## 2026-08-26 (맥 트윈 생성 성공)
 
 - API로 My Machines 트윈 생성됨: `아이폰 맥북 제어 (Mac)`
