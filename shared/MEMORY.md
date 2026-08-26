@@ -2,6 +2,13 @@
 
 비밀번호·토큰·쿠키는 적지 않는다. 최신이 위로.
 
+## 2026-08-26 (점검)
+
+- Environment **연결됨** (`9f91a6b7-a123-11f1-b532-320a589b8025`, draft build 진행).
+- `shared/bin/healthcheck.sh` 추가: 허브 파일 OK, Chrome CDP OK, OAuth 시크릿만 미등록.
+- 캘린더 재검증: 2027 `[학사]`/`[목]` = 0, 2026-08-27 존재 확인.
+- GitHub 공개 레포: `sorktl12-ux/-`, `sorktl12-ux/beatlink` 만 보임. `english-call` 공개 레포 없음(비공개/에이전트명일 수 있음).
+
 ## 2026-08-26
 
 - Gmail Chrome 로그인 완료 (`sorktl12@gmail.com`).
@@ -15,7 +22,8 @@
 
 ## 미완료 / 다음 에이전트용
 
-- [ ] Cursor Environment 저장 (이 레포 + 다른 레포 연결)
+- [x] Environment 초안 연결 (draft build)
+- [ ] Environment **Save**(사용자) — 다른 에이전트 부팅에 반영
 - [ ] `GOOGLE_*` OAuth 시크릿 등록 → API 자동 로그인
 - [ ] 맥북 `agent worker start` (iPhone 파일 정리 실실행)
-- [ ] english-call / 브리핑 에이전트가 `shared/` 읽도록 안내
+- [ ] english-call Git URL을 Environment repos에 추가 (비공개면 URL 필요)
