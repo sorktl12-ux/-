@@ -18,14 +18,13 @@
 ### A. 레포 + worker
 
 ```bash
-# 원하는 폴더에서
-git clone https://github.com/sorktl12-ux/-.git
-cd -
+# 원하는 폴더에서 (레포 이름이 "-"라서 폴더명을 hub로 권장)
+git clone https://github.com/sorktl12-ux/-.git hub
+cd hub
 git fetch origin
 git checkout cursor/iphone-mac-data-organizer-c10a
 git pull origin cursor/iphone-mac-data-organizer-c10a
-git submodule update --init --recursive
-bash shared/bin/link-repos.sh   # private는 GITHUB_TOKEN 필요
+bash shared/bin/mac-bootstrap.sh
 
 # CLI + worker (창 유지)
 curl https://cursor.com/install -fsS | bash
@@ -33,7 +32,8 @@ agent login
 agent worker start --name "MacBook"
 ```
 
-또는 한 번에: `bash shared/bin/mac-bootstrap.sh`
+worker Connected 후, API 키가 있으면 Cloud 에이전트가 `bash shared/bin/launch-mac-twin.sh`로 트윈을 자동 생성할 수 있다.
+Environment Secret: `CURSOR_API_KEY` (https://cursor.com/dashboard/api) + 선택 `GITHUB_TOKEN`.
 
 ### B. 새 에이전트 (PC / cursor.com)
 

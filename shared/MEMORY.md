@@ -2,6 +2,12 @@
 
 비밀번호·토큰·쿠키는 적지 않는다. 최신이 위로.
 
+## 2026-08-26 (트윈 자동 생성 준비)
+
+- `shared/bin/launch-mac-twin.sh` 추가: `CURSOR_API_KEY` + Mac worker(`MacBook`) 있으면 API로 트윈 에이전트 생성.
+- 블로커(본인만): 맥에서 `agent worker start --name MacBook` + Environment Secret `CURSOR_API_KEY`.
+- 이 Cloud 세션만으로는 맥북 프로세스를 켤 수 없음.
+
 ## 2026-08-26 (맥북 트윈 핸드오프)
 
 - 사용자 요청: 「아이폰 맥북 제어」채팅을 PC(맥) 버전으로 복제하고 데이터 공유.
