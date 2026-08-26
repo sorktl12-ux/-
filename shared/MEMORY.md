@@ -2,6 +2,13 @@
 
 비밀번호·토큰·쿠키는 적지 않는다. 최신이 위로.
 
+## 2026-08-26 (맥 트윈 생성 성공)
+
+- API로 My Machines 트윈 생성됨: `아이폰 맥북 제어 (Mac)`
+- URL: https://cursor.com/agents/bc-bbd7ad47-277d-4fa2-9e0e-c850179caa68
+- env: machine `MacBook`, branch `cursor/iphone-mac-data-organizer-c10a`
+- 채팅에 API 키가 노출됐으므로 Dashboard에서 해당 키 재발급/삭제 권장 (로컬에는 저장만).
+
 ## 2026-08-26 (트윈 자동 생성 준비)
 
 - `shared/bin/launch-mac-twin.sh` 추가: `CURSOR_API_KEY` + Mac worker(`MacBook`) 있으면 API로 트윈 에이전트 생성.
