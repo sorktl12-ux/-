@@ -7,4 +7,5 @@ Before any non-trivial task in this workspace:
 3. Reuse tools under `google-calendar-sync/`, `iphone-data-organizer/`, `shared/morning-briefing/`, and `linked/*`.
 4. After completing user-visible work, append a dated note to `shared/MEMORY.md` (no secrets).
 5. Calendar events: current year only unless user says otherwise; use `[학사]` / `[목]` prefixes.
-6. Run `./shared/bin/link-repos.sh` if linked clones are missing (`GITHUB_TOKEN` needed for private `beat-drop`).
+6. Run `./shared/bin/link-repos.sh` if `linked/*` clones are missing (needs `GITHUB_TOKEN` for private repos).
+7. Sidebar aliases: english-call, beat-drop, profile-maintain(긱스/루이), beatlink, 아침브리핑(메일).
