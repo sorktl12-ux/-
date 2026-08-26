@@ -2,6 +2,13 @@
 
 비밀번호·토큰·쿠키는 적지 않는다. 최신이 위로.
 
+## 2026-08-26 (맥북 트윈 핸드오프)
+
+- 사용자 요청: 「아이폰 맥북 제어」채팅을 PC(맥) 버전으로 복제하고 데이터 공유.
+- Cloud 세션은 복제 불가 → `shared/HANDOFF_MAC.md` + `shared/bin/mac-bootstrap.sh`로 **My Machines 트윈** 생성.
+- 트윈 첫 메시지(복붙)는 HANDOFF_MAC.md 섹션 C.
+- 공유 소스: 이 레포 `shared/` · `linked/` · AGENTS.md · .cursor/rules.
+
 ## 2026-08-26 (런타임 선호: 맥북)
 
 - 사용자: 가상 Desktop으로 진행한 방식은 불편. **앞으로는 맥북에서 직접 보이게** 처리할 것.

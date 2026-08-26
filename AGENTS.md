@@ -2,8 +2,8 @@
 
 Before any non-trivial task in this workspace:
 
-1. Read `shared/README.md`, `shared/PROFILE.md`, `shared/MEMORY.md`, `shared/CAPABILITIES.md`, `shared/MY_MACHINES.md`.
-2. **Runtime preference**: prefer MacBook My Machines (not Cloud virtual desktop). If this session is Cloud VM, tell the user to start `agent worker start --name MacBook` and open a **new** agent on My Machines for Mac-visible work.
+1. Read `shared/HANDOFF_MAC.md` (Mac twin), `shared/README.md`, `shared/PROFILE.md`, `shared/MEMORY.md`, `shared/CAPABILITIES.md`, `shared/MY_MACHINES.md`.
+2. **Runtime preference**: prefer MacBook My Machines (not Cloud virtual desktop). If this session is Cloud VM, point user to `shared/HANDOFF_MAC.md` — do not claim to control Mac Chrome.
 3. Check `linked/README.md` / `linked/registry.json` for other Cursor repos.
 4. Reuse tools under `google-calendar-sync/`, `iphone-data-organizer/`, `shared/morning-briefing/`, and `linked/*`.
 5. After completing user-visible work, append a dated note to `shared/MEMORY.md` (no secrets).

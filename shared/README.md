@@ -3,6 +3,9 @@
 이 저장소의 **모든 Cursor 에이전트**는 작업을 시작하기 전에 이 폴더를 읽는다.
 아침 브리핑 · 프로필 · 캘린더 · 아이폰 정리 · english-call 등 **기능끼리 정보를 공유**하기 위한 중심이다.
 
+폰 Cloud 채팅 → 맥북 트윈: `shared/HANDOFF_MAC.md`  
+맥북 기본 실행: `shared/MY_MACHINES.md`
+
 ## 필수 읽기 순서
 
 1. `shared/PROFILE.md` — 사용자·계정·기기

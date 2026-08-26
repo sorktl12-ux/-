@@ -4,6 +4,17 @@
 
 이 문서는 그 기본값을 고정한다. 새 에이전트는 가능하면 항상 My Machines를 고른다.
 
+## 맥북 트윈 채팅 (폰 Cloud → PC)
+
+폰에서 연 「아이폰 맥북 제어」를 맥에서 이어받으려면:
+
+1. `bash shared/bin/mac-bootstrap.sh`
+2. `agent worker start --name "MacBook"`
+3. 새 에이전트에서 **My Machines → MacBook**
+4. `shared/HANDOFF_MAC.md` 섹션 C 프롬프트 복붙
+
+상세: `shared/HANDOFF_MAC.md`
+
 ## 왜 지금 이 채팅은 가상 PC인가
 
 이미 시작된 Cloud Agent(`usePrivateWorker: false`)는 세션 중간에 맥북으로 옮길 수 없다.  
