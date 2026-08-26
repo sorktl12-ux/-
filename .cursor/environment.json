@@ -2,7 +2,10 @@
   "snapshot": "snapshot-20260826-aab98861-9e97-45b6-9bb4-3a904543b2ec",
   "repositoryDependencies": [
     "github.com/sorktl12-ux/beatlink",
-    "github.com/sorktl12-ux/beat-drop"
+    "github.com/sorktl12-ux/beat-drop",
+    "github.com/sorktl12-ux/english-call",
+    "github.com/sorktl12-ux/profile-maintain",
+    "github.com/sorktl12-ux/beatlink1"
   ],
-  "install": "pip3 install --user google-api-python-client google-auth google-auth-oauthlib websockets pillow 2>/dev/null || true\nchmod +x iphone-data-organizer/install.sh iphone-data-organizer/scripts/*.sh shared/bin/*.sh 2>/dev/null || true\nbash shared/bin/link-repos.sh || true\ngit submodule update --init --recursive 2>/dev/null || true\ntest -f shared/README.md && echo SHARED_HUB_OK\ntest -d linked/beatlink && echo BEATLINK_LINKED\ntest -d linked/beat-drop && echo BEATDROP_LINKED || echo BEATDROP_PENDING_TOKEN\necho Shared hub + linked repos ready"
+  "install": "pip3 install --user google-api-python-client google-auth google-auth-oauthlib websockets pillow 2>/dev/null || true\nchmod +x iphone-data-organizer/install.sh iphone-data-organizer/scripts/*.sh shared/bin/*.sh 2>/dev/null || true\nbash shared/bin/link-repos.sh || true\ngit submodule update --init --recursive 2>/dev/null || true\ntest -f shared/README.md && echo SHARED_HUB_OK\ntest -d linked/beatlink && echo BEATLINK_LINKED\ntest -d linked/beat-drop && echo BEATDROP_LINKED || echo BEATDROP_PENDING\ntest -d linked/english-call && echo ENGLISH_CALL_LINKED || echo ENGLISH_CALL_PENDING\necho Shared hub + linked repos ready"
 }

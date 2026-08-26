@@ -1,0 +1,16 @@
+# Local-only (never commit)
+.local/
+.env.agent.local
+*.pem
+
+# Private linked clones (fetched via GITHUB_TOKEN + link-repos.sh)
+linked/beat-drop/
+linked/english-call/
+linked/profile-maintain/
+linked/beatlink1/
+
+# OS / editor
+.DS_Store
+__pycache__/
+*.pyc
+node_modules/

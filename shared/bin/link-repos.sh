@@ -1,14 +1,24 @@
 #!/usr/bin/env bash
 # Clone/update all repos listed in linked/registry.json that have a github URL.
-# Uses GITHUB_TOKEN (classic PAT, repo scope) when set — required for private repos.
+# Auth: GITHUB_TOKEN / GH_TOKEN env, else ~/.config/sorktl12/github_token, else .local/GITHUB_TOKEN
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
 export ROOT
-REG="$ROOT/linked/registry.json"
 mkdir -p "$ROOT/linked"
 
 if ! command -v python3 >/dev/null; then
   echo "python3 required"; exit 1
+fi
+
+# Load token from common local paths if unset
+if [[ -z "${GITHUB_TOKEN:-}" && -z "${GH_TOKEN:-}" ]]; then
+  for f in "$HOME/.config/sorktl12/github_token" "$ROOT/.local/GITHUB_TOKEN"; do
+    if [[ -f "$f" ]]; then
+      export GITHUB_TOKEN
+      GITHUB_TOKEN="$(tr -d ' \n\r' < "$f")"
+      break
+    fi
+  done
 fi
 
 python3 - <<'PY'

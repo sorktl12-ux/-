@@ -6,7 +6,7 @@
 | Google / Cursor 계정 | sorktl12@gmail.com |
 | 주 기기 | iPhone (Cursor 앱), MacBook |
 | Google Calendar | primary (`설원도`), Asia/Seoul |
-| GitHub | sorktl12-ux (공개: `-`, `beatlink` / private: `beat-drop`) |
+| GitHub | sorktl12-ux — repos: `-`, beatlink, beat-drop, english-call, profile-maintain, beatlink1 |
 | 활동 권역 | 서울 송파 인근 (브리핑 주유소 반경 기준) |
 
 ## 기기·연동 상태 (이 컴퓨터 기준)
