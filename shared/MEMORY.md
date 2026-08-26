@@ -4,23 +4,13 @@
 
 ## 2026-08-26 (최종)
 
-- **캘린더 완료**: `[학사]` 20/20, `[목]` 13일×5블록 전부 존재 (누락 0). 2026만.
-- **Environment**: 연결됨 + draft build **SUCCEEDED** (`bld-20260826-b755f83c-9020-447a-89a5-70d8a6b64e0b`). `propose-environment-json` 완료 → **사용자 Save 1클릭 남음**.
-- shared 허브·healthcheck·Chrome Gmail/Calendar 로그인 유지.
-- english-call 공개 GitHub 레포 없음 → URL 있으면 Environment repos에 추가.
+- **캘린더 완료**: `[학사]` 20/20, `[목]` 13일×5블록 전부 (누락 0). 2026만.
+- **Environment**: snapshot ready → `.cursor/environment.json`에 커밋 (모바일 Save UI 없음 대응).
+  - snapshot: `snapshot-20260826-aab98861-9e97-45b6-9bb4-3a904543b2ec`
+- shared 허브·Chrome Gmail/Calendar 로그인 유지.
+- 웹에서 Environment 보려면: https://cursor.com/dashboard/cloud-agents#environments
 
-## 2026-08-26 (점검)
+## 선택 미완료
 
-- Environment 초안 연결, healthcheck, 연도 검증, 중복 개강 1건 삭제.
-
-## Environment (모바일 Save 없을 때)
-
-- 대시보드 Save가 안 보여도 레포 `.cursor/environment.json`에 snapshot이 있으면 **우선 적용**됨.
-- snapshot: `snapshot-20260826-aab98861-9e97-45b6-9bb4-3a904543b2ec` (ready)
-- 웹에서 보려면: https://cursor.com/dashboard/cloud-agents#environments
-- 에이전트: https://cursor.com/agents/bc-019f419b-a00a-7934-a2b3-cab8404cc10a
-
-## 미완료 (선택)
-
-- [ ] (선택) `GOOGLE_*` OAuth 시크릿
-- [ ] (선택) english-call Git URL / 맥북 My Machines
+- `GOOGLE_*` OAuth 시크릿
+- english-call Git URL / 맥북 My Machines
