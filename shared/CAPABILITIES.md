@@ -36,4 +36,8 @@
 
 ## 5. Cursor / 에이전트
 
-Cloud Agent VM · Remote Desktop · iPhone 앱은 리모컨.
+| 방식 | 언제 |
+|------|------|
+| **맥북 My Machines** | **기본** — Chrome/파일이 맥북에 바로 보임 (`shared/MY_MACHINES.md`) |
+| Cloud 가상 Desktop | My Machines 불가할 때만 |
+| iPhone Cursor 앱 | 지시·리뷰 리모컨 |
